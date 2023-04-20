@@ -1,0 +1,70 @@
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+
+<header id="header" class="header_1 header_2">
+    <div class="toolbar d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 hidden-xs">
+                    <div class="thim-have-any-question">
+                        Have any question ?
+                        <div class="mobile"><i class="fa fa-phone m-r-5"></i><a class="value" href="tel:+91-022-27541005">
+                                +91-022-27541005</a></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="child_login pull-right">
+                        <?php
+                        if (isset($_SESSION['email'])) {
+                        ?>
+                        <a href="#" class="m-l-10"><?php echo $_SESSION['email'] ?></a>
+                        <a href="logout.php" class="">Logout</a>
+                        <?php
+                        } else {
+                        ?>
+                        <a href="javascript:void(0)" class="register m-l-10 js-modal-show">Register</a>
+                        <a href="javascript:void(0)" class="login js-modal-show">Login</a>
+                        <?php
+                        }
+                        ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="study_nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-faded mb-0 ">
+                <a class="navbar-brand" href="index.html"><img
+                        src="https://cdn.discordapp.com/attachments/903936215718461481/1002587122571689984/download.png"
+                        alt="Main Logo" height="100px"></a>
+                <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav lavalamp ml-auto menu main_menu">
+                        <li class="nav-item single_nav menu-item"><a href="index.php" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item single_nav menu-item"><a href="about.php" class="nav-link">About
+                                Us</a></li>
+                        <li class="nav-item single_nav menu-item"><a href="contact.php" class="nav-link">Contact
+                                Us</a></li>
+                        <?php
+                        if (isset($_SESSION['email'])) {
+                        ?>
+                        <li class="nav-item single_nav menu-item"><a href="fees.php" class="nav-link">Pay Fees
+                            </a></li>
+                        <li class="nav-item single_nav menu-item"><a href="profile.php" class="nav-link">Profile</a>
+                        </li>
+                        <?php
+                        }
+                        ?>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+</header>
